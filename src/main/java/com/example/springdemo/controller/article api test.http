@@ -1,0 +1,14 @@
+###
+GET http://localhost:8080
+
+###
+GET http://localhost:8080/api/articles
+
+###
+DELETE http://localhost:8080/api/articles/1
+
+###
+PUT http://localhost:8080/api/articles/1
+Content-Type: application/json
+
+{"title":"새 블로그", "content":"새로운 글을 써볼까?"}
