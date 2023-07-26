@@ -1,6 +1,7 @@
 spring:
   datasource:
     url: jdbc:h2:mem:testdb
+    username: sa
   sql:
     init:
       encoding: UTF-8
@@ -10,4 +11,14 @@ spring:
       enabled: true
 
   jpa:
+    # 쿼리 확인ㄴ
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    # 테이블 생성 후에 data.sql 실행
     defer-datasource-initialization: true
+
+jwt:
+  issuer: kji0205@gmail.com
+  secret_key: study-springboot

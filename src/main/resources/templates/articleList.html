@@ -7,14 +7,15 @@
 </head>
 <body>
 <div class="p-5 mb-5 text-center</> bg-light">
-  <h1 class="mb-3">My Blog</h1>
-  <h4 class="mb-3">블로그에 오신 것을 환영합니다.</h4>
+    <h1 class="mb-3">My Blog</h1>
+    <h4 class="mb-3">블로그에 오신 것을 환영합니다.</h4>
 </div>
 
 <div class="container">
     <button id="create-btn"
             th:onclick="|location.href='@{/new-article}'|"
-            class="btn btn-secondary btn-sm mb-3">글 등록</button>
+            class="btn btn-secondary btn-sm mb-3">글 등록
+    </button>
     <div class="row-6" th:each="item : ${articles}">
         <div class="card">
             <div class="card-header" th:text="${item.id}"></div>
@@ -25,6 +26,10 @@
             </div>
         </div>
     </div>
+
+    <button type="button" class="btn btn-secondary" onclick="location.href='/logout'">로그아웃</button>
 </div>
+
+<scripts src="/js/article.js"></scripts>
 </body>
 </html>
