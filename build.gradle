@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.6-SNAPSHOT'
 
 java {
 	sourceCompatibility = '11'
@@ -26,11 +26,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-//	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE'
-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE'
+//	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 	implementation 'javax.xml.bind:jaxb-api:2.3.1'
+//	implementation 'mysql:mysql-connector-java'
+	implementation 'mysql:mysql-connector-java:8.0.13'
+
 	testImplementation 'org.projectlombok:lombok:1.18.26'
 
 	runtimeOnly 'com.h2database:h2'

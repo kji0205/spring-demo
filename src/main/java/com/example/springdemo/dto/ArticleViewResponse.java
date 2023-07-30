@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 public class ArticleViewResponse {
     private Long id;
-    private String title, content;
+    private String author, title, content;
     private LocalDateTime createdAt;
 
     public ArticleViewResponse(Article article) {
@@ -18,5 +18,6 @@ public class ArticleViewResponse {
         this.title = article.getTitle();
         this.content = article.getContent();
         this.createdAt = article.getCreatedAt();
+        this.author = article.getAuthor();
     }
 }

@@ -1,0 +1,31 @@
+### RequestMapping 사용 (test)
+GET http://localhost:8080/test/testGetMapping
+
+### 매개변수를 넘기는 방법
+GET http://localhost:8080/test/123
+
+### RequestParam을 이용한 매개변수를 넘기는 방법
+GET http://localhost:8080/test/testRequestParam?id=123
+
+### 매개변수를 넘기는 방법
+GET http://localhost:8080/testGetMapping
+
+### 매개변수를 넘기는 방법
+POST http://localhost:8080/test/testRequestBody
+Content-Type: application/json
+
+{
+  "id": 123,
+  "message": "Hello ?"
+}
+
+###
+GET http://localhost:8080/test/testRequestBody?id=123
+#Content-Type: application/json
+#
+#{
+#  "id": 123,
+#  "message": "Hello ?"
+#}
+
+###

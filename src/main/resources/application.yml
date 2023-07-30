@@ -1,7 +1,4 @@
 spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
   sql:
     init:
       encoding: UTF-8
@@ -18,6 +15,14 @@ spring:
         format_sql: true
     # 테이블 생성 후에 data.sql 실행
     defer-datasource-initialization: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 689056871882-1rd379amv9r0kp4ia4c7brb17b6m4h2m.apps.googleusercontent.com
+            clientSecret: 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
 
 jwt:
   issuer: kji0205@gmail.com
